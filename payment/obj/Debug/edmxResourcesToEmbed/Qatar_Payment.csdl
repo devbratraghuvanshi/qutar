@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuatarPayemntModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="QuatarPayemntEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBLQU_CLIENTMASTER" EntityType="QuatarPayemntModel.TBLQU_CLIENTMASTER" />
+    <EntitySet Name="TBLQU_PAYMENTRate" EntityType="QuatarPayemntModel.TBLQU_PAYMENTRate" />
+    <EntitySet Name="TBLQU_User_Master" EntityType="QuatarPayemntModel.TBLQU_User_Master" />
+    <EntitySet Name="TBLQU_PAYMENTHIS" EntityType="QuatarPayemntModel.TBLQU_PAYMENTHIS" />
+    <EntitySet Name="TBLQU_UserLocation" EntityType="QuatarPayemntModel.TBLQU_UserLocation" />
+    <EntitySet Name="TBLQU_PAYMENTMASTER" EntityType="QuatarPayemntModel.TBLQU_PAYMENTMASTER" />
+  </EntityContainer>
+  <EntityType Name="TBLQU_CLIENTMASTER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ClientID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ClientfirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ClientLastName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PhoneNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileNo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmailID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nationality" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+  </EntityType>
+  <EntityType Name="TBLQU_PAYMENTRate">
+    <Key>
+      <PropertyRef Name="Currency_From" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Currency_From" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Currency_to" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="rate" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="modifie_date" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="TBLQU_User_Master">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="emailid" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="mobileno" />
+    <Property Type="String" Name="userid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="password" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="user_type" />
+  </EntityType>
+  <EntityType Name="TBLQU_PAYMENTHIS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="vpc_MerchTxnRef" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="vpc_TxnResponseCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="vpc_Amount" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="vpc_Command" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="vpc_Version" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="vpc_OrderInfo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="vpc_Merchant" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="vpc_BatchNo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="vpc_Card" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="vpc_ReceiptNo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="vpc_AuthorizeId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="vpc_AcqResponseCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="vpc_TransactionNo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="vpc_Message" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="created_date" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="modifed_date" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="TBLQU_UserLocation">
+    <Key>
+      <PropertyRef Name="UserLocationPK" />
+    </Key>
+    <Property Name="BookingRef" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CountryCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CountryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RegionCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RegionName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ZipCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TimeZone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Latitude" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Longitude" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UserLocationPK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TBLQU_PAYMENTMASTER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BookingRef" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PackageName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Currency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Var_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="payment_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="payment_token" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="created_date" Type="DateTime" Precision="3" />
+    <Property Name="modifed_date" Type="DateTime" Precision="3" />
+    <Property Name="booked_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="currencyrate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TermAndCondition" Type="Boolean" />
+    <Property Name="Discription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FailedAttempt" Type="Int32" />
+    <Property Name="FailedAttemptLimit" Type="Int32" />
+    <Property Name="IsBlocked" Type="Boolean" Nullable="false" />
+  </EntityType>
+</Schema>

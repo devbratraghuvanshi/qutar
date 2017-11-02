@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Emailer</title>
+
+<!-- Bootstrap -->
+<style>
+
+
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+
+        .container table tr td {
+            border-bottom: #CCC solid 1px;
+            padding: 5px;
+        }
+
+    .tdbg {
+        background: #3772bc;
+    }
+
+    .bdrshadow {
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .bdr {
+        border: #CCC solid 1px;
+    }
+
+    .bdrr {
+        border-left: #CCC solid 1px;
+    }
+
+    .font12 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: #333;
+        line-height: 22px;
+    }
+
+    .font16 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px bold;
+        color: #333;
+    }
+
+    .bdrn {
+        border: none;
+    }
+
+    .style-1 {
+        padding: 5px;
+        border: solid 1px #bebebe;
+        border-radius: 5px;
+        transition: box-shadow 0.3s, border 0.3s;
+        width: auto;
+    }
+
+    h2 {
+        color: #fff;
+    }
+
+    .red {
+        color: #F00;
+    }
+
+    .green {
+        color: #063;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body >
+
+<div class="container">
+
+<div align="center"><img src="http://payment.yallacheckinn.com/Image/logoyalla.png"/></div>
+<br />
+<table width="650" border="0" cellspacing="0" cellpadding="0" class="font12 bdr" align="center">
+  <tr>
+    <td class=" bdrbtm tdbg" colspan="2" align="center"><h2>PAYMENT DETAILS</h2></td>
+  </tr>
+  <tr>
+    <td width="50%" >&nbsp;</td>
+    <td width="50%" class="bdrr" >&nbsp;</td>
+  </tr>
+    <tr>
+        <td ><strong>Booking Ref:-</strong><span class="green">[[Booking_Ref]]</span></td>
+        <td class="bdrr"></td>
+    </tr>
+  <tr>
+    <td><strong>Client Name:-</strong>[[NAME]]</td>
+   <td class="bdrr"><strong>Package Name:-</strong> [[P_NAME]]</td>
+  </tr>
+  <tr>
+    <td><strong>Address:- </strong>[[Address]]</td>
+    <td class="bdrr"><strong>Nationality:-</strong> [[NAT]]</td>
+  </tr>
+  <tr>
+    <td><strong>Mobile No.:- </strong>[[Mobile]]</td>
+    <td class="bdrr"><!--<strong>Currency:-</strong> [[CUR]]--></td>
+  </tr>
+  <tr>
+    <td><strong>Email Id:-</strong> [[EMAIL]]</td>
+    <td class="bdrr"><strong>Amount:-</strong> [[AMOUNT]]  [[CUR]]</td>
+  </tr>
+  <tr>
+    <td><strong>Payment Status:- </strong> <span class="red">[[TSTAT]]</span></td>
+    <td class="bdrr">&nbsp;</td>
+  </tr>
+  <tr>
+    
+    <td style="text-align:right;color:Red" class="bdrr" colspan="2">
+    <a href="[[urlpayment]]" class="button" style="   display: block;
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin-left: 500px;" >Make Payment</a>
+    </td>
+  </tr>
+  </table>
+<br />
+<br />
+<br />
+<br />
+</div>
+<style>
+.button {
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin-left: 500px;
+}
+</style>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuatarPayemntModelStoreContainer" CdmEntityContainer="QuatarPayemntEntities">
+    <EntitySetMapping Name="TBLQU_CLIENTMASTER">
+      <EntityTypeMapping TypeName="QuatarPayemntModel.TBLQU_CLIENTMASTER">
+        <MappingFragment StoreEntitySet="TBLQU_CLIENTMASTER">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ClientLastName" ColumnName="ClientLastName" />
+          <ScalarProperty Name="ClientfirstName" ColumnName="ClientfirstName" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLQU_PAYMENTRate">
+      <EntityTypeMapping TypeName="QuatarPayemntModel.TBLQU_PAYMENTRate">
+        <MappingFragment StoreEntitySet="TBLQU_PAYMENTRate">
+          <ScalarProperty Name="modifie_date" ColumnName="modifie_date" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="Currency_to" ColumnName="Currency_to" />
+          <ScalarProperty Name="Currency_From" ColumnName="Currency_From" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLQU_User_Master">
+      <EntityTypeMapping TypeName="QuatarPayemntModel.TBLQU_User_Master">
+        <MappingFragment StoreEntitySet="TBLQU_User_Master">
+          <ScalarProperty Name="user_type" ColumnName="user_type" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLQU_PAYMENTHIS">
+      <EntityTypeMapping TypeName="QuatarPayemntModel.TBLQU_PAYMENTHIS">
+        <MappingFragment StoreEntitySet="TBLQU_PAYMENTHIS">
+          <ScalarProperty Name="modifed_date" ColumnName="modifed_date" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="vpc_Message" ColumnName="vpc_Message" />
+          <ScalarProperty Name="vpc_TransactionNo" ColumnName="vpc_TransactionNo" />
+          <ScalarProperty Name="vpc_AcqResponseCode" ColumnName="vpc_AcqResponseCode" />
+          <ScalarProperty Name="vpc_AuthorizeId" ColumnName="vpc_AuthorizeId" />
+          <ScalarProperty Name="vpc_ReceiptNo" ColumnName="vpc_ReceiptNo" />
+          <ScalarProperty Name="vpc_Card" ColumnName="vpc_Card" />
+          <ScalarProperty Name="vpc_BatchNo" ColumnName="vpc_BatchNo" />
+          <ScalarProperty Name="vpc_Merchant" ColumnName="vpc_Merchant" />
+          <ScalarProperty Name="vpc_OrderInfo" ColumnName="vpc_OrderInfo" />
+          <ScalarProperty Name="vpc_Version" ColumnName="vpc_Version" />
+          <ScalarProperty Name="vpc_Command" ColumnName="vpc_Command" />
+          <ScalarProperty Name="vpc_Amount" ColumnName="vpc_Amount" />
+          <ScalarProperty Name="vpc_TxnResponseCode" ColumnName="vpc_TxnResponseCode" />
+          <ScalarProperty Name="vpc_MerchTxnRef" ColumnName="vpc_MerchTxnRef" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLQU_UserLocation">
+      <EntityTypeMapping TypeName="QuatarPayemntModel.TBLQU_UserLocation">
+        <MappingFragment StoreEntitySet="TBLQU_UserLocation">
+          <ScalarProperty Name="UserLocationPK" ColumnName="UserLocationPK" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="TimeZone" ColumnName="TimeZone" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+          <ScalarProperty Name="RegionCode" ColumnName="RegionCode" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="BookingRef" ColumnName="BookingRef" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLQU_PAYMENTMASTER">
+      <EntityTypeMapping TypeName="QuatarPayemntModel.TBLQU_PAYMENTMASTER">
+        <MappingFragment StoreEntitySet="TBLQU_PAYMENTMASTER">
+          <ScalarProperty Name="IsBlocked" ColumnName="IsBlocked" />
+          <ScalarProperty Name="FailedAttemptLimit" ColumnName="FailedAttemptLimit" />
+          <ScalarProperty Name="FailedAttempt" ColumnName="FailedAttempt" />
+          <ScalarProperty Name="Discription" ColumnName="Discription" />
+          <ScalarProperty Name="TermAndCondition" ColumnName="TermAndCondition" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="currencyrate" ColumnName="currencyrate" />
+          <ScalarProperty Name="booked_by" ColumnName="booked_by" />
+          <ScalarProperty Name="modifed_date" ColumnName="modifed_date" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="payment_token" ColumnName="payment_token" />
+          <ScalarProperty Name="payment_id" ColumnName="payment_id" />
+          <ScalarProperty Name="Var_Status" ColumnName="Var_Status" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+          <ScalarProperty Name="BookingRef" ColumnName="BookingRef" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

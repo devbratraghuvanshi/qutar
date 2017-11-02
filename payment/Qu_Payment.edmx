@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="QUPAYMENTModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="QUPAYMENTModelStoreContainer">
+          <EntitySet Name="TBLQU_CLIENTMASTER" EntityType="QUPAYMENTModel.Store.TBLQU_CLIENTMASTER" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TBLQU_PAYMENTMASTER" EntityType="QUPAYMENTModel.Store.TBLQU_PAYMENTMASTER" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TBLQU_User_Master" EntityType="QUPAYMENTModel.Store.TBLQU_User_Master" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="TBLQU_CLIENTMASTER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClientID" Type="nvarchar" MaxLength="50" />
+          <Property Name="ClientfirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ClientLastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="PhoneNo" Type="numeric" />
+          <Property Name="MobileNo" Type="numeric" Nullable="false" />
+          <Property Name="EmailID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TBLQU_PAYMENTMASTER">
+          <Key>
+            <PropertyRef Name="BookingRef" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ClientID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="BookingRef" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PackageName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Amount" Type="decimal" Nullable="false" />
+          <Property Name="Currency" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Var_Status" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="payment_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="payment_token" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="created_date" Type="datetime" Nullable="false" />
+          <Property Name="modifed_date" Type="datetime" Nullable="false" />
+          <Property Name="booked_by" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLQU_User_Master">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="emailid" Type="varchar" MaxLength="50" />
+          <Property Name="mobileno" Type="int" />
+          <Property Name="userid" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="password" Type="varchar" MaxLength="50" />
+          <Property Name="user_type" Type="int" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QUPAYMENTModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="QUPAYMENTEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TBLQU_PAYMENTMASTER" EntityType="QUPAYMENTModel.TBLQU_PAYMENTMASTER" />
+          <EntitySet Name="TBLQU_User_Master" EntityType="QUPAYMENTModel.TBLQU_User_Master" />
+          <EntitySet Name="TBLQU_CLIENTMASTER" EntityType="QUPAYMENTModel.TBLQU_CLIENTMASTER" />
+        </EntityContainer>
+        <EntityType Name="TBLQU_PAYMENTMASTER">
+          <Key>
+            <PropertyRef Name="BookingRef" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ClientID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BookingRef" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PackageName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Currency" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Var_Status" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="payment_id" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="payment_token" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="created_date" Type="DateTime" Nullable="false" />
+          <Property Name="modifed_date" Type="DateTime" Nullable="false" />
+          <Property Type="String" Name="booked_by" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBLQU_User_Master">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="emailid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="mobileno" Type="Int32" />
+          <Property Name="userid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="password" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Type="Int32" Name="user_type" />
+        </EntityType>
+        <EntityType Name="TBLQU_CLIENTMASTER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ClientID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClientfirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClientLastName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="PhoneNo" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="MobileNo" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="String" Name="EmailID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Nationality" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreatedDate" />
+          <Property Type="DateTime" Name="ModifiedDate" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QUPAYMENTModelStoreContainer" CdmEntityContainer="QUPAYMENTEntities">
+          <EntitySetMapping Name="TBLQU_PAYMENTMASTER">
+            <EntityTypeMapping TypeName="QUPAYMENTModel.TBLQU_PAYMENTMASTER">
+              <MappingFragment StoreEntitySet="TBLQU_PAYMENTMASTER">
+                <ScalarProperty Name="booked_by" ColumnName="booked_by" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="BookingRef" ColumnName="BookingRef" />
+                <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Var_Status" ColumnName="Var_Status" />
+                <ScalarProperty Name="payment_id" ColumnName="payment_id" />
+                <ScalarProperty Name="payment_token" ColumnName="payment_token" />
+                <ScalarProperty Name="created_date" ColumnName="created_date" />
+                <ScalarProperty Name="modifed_date" ColumnName="modifed_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLQU_User_Master">
+            <EntityTypeMapping TypeName="QUPAYMENTModel.TBLQU_User_Master">
+              <MappingFragment StoreEntitySet="TBLQU_User_Master">
+                <ScalarProperty Name="user_type" ColumnName="user_type" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="emailid" ColumnName="emailid" />
+                <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLQU_CLIENTMASTER">
+            <EntityTypeMapping TypeName="QUPAYMENTModel.TBLQU_CLIENTMASTER">
+              <MappingFragment StoreEntitySet="TBLQU_CLIENTMASTER">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="ClientLastName" ColumnName="ClientLastName" />
+                <ScalarProperty Name="ClientfirstName" ColumnName="ClientfirstName" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Qu_Payment">
+        <EntityTypeShape EntityType="QUPAYMENTModel.TBLQU_PAYMENTMASTER" Width="1.5" PointX="2.75" PointY="0.75" Height="3.3263964843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUPAYMENTModel.TBLQU_User_Master" Width="1.5" PointX="4.75" PointY="0.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUPAYMENTModel.TBLQU_CLIENTMASTER" Width="1.5" PointX="0.875" PointY="1" Height="3.1340950520833335" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,221 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Qa_Payment.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Styles/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/header-v9.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/footercss.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+  
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <asp:HiddenField runat="server" Value="" ID="hdn_url" ClientIDMode="Static" />
+        <input type="hidden" value="" id="hdn_usertype" runat="server" clientidmode="Static" />
+        <input type="hidden" value="" id="hdn_userid" runat="server" clientidmode="Static" />
+        <!-- Header -->
+        <nav class="header-v9 navbar navbar-default " data-role="navigation">
+    <div class="container-fluid no-side-padding bg-1">
+      <!-- Topbar -->
+      <div class="topbar">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-3 col-xs-4 page-scroll">
+              <a href="#start" class="logo"><img src="../Image/logoyalla.png" alt="Logo"></a>
+            </div>
+
+            <div class="col-sm-9 col-xs-8" align="right" style="margin-top:100px">
+            <span aria-hidden="true" class="glyphicon glyphicon-log-out"></span> <a id="A2" onclick="javascript:log_out()" name="lnkLogout" href="#" >Logout</a>
+              <br>
+              Welcome <strong id="client_name" runat="server" clientidmode="Static">
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Topbar -->
+    </div>
+
+      
+
+    
+
+    <div class="container-fluid bg-2 one-page-nav-scrolling one-page-nav__fixed" style="padding:0 5px;">
+      <div class="container"><!-- 5 sep -->
+        <div class="menu-container page-scroll">
+          <button type="button" class="navbar-toggle" id="btn_navigate"  data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <div style="color:#fff; font-size:11px;">Menu</div>
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Daily Activity Report</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse"  id="navbar">
+          <div class="menu-container">
+            <ul class="nav navbar-nav">
+              <%--<li class="page-scroll" id="li_home">
+               <a href="Home.aspx" >
+                	<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    Home
+                </a>
+              </li>--%>
+    	      <li class="page-scroll"  id="li_CLIENT">
+              	<a href="Booking.aspx">
+                	<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                	<b></b>Booking 
+                </a>
+              </li>
+        	  <li class="page-scroll"  id="li_Prospect">
+              <a href="Payment_Tracker.aspx"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                <b> </b>Payment Tracker</a>
+              </li>
+        	 
+         
+              
+            </ul>
+          </div>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </div>
+  </nav>
+
+
+
+        <div id="waiting-overlay" style="display: none; z-index: 9999; position: absolute">
+            <div style="padding-top: 100px; padding-left: 600px; text-align: center;">
+                <img alt="" id="Img2" src="http://wealthmaker.in/dar_new/image/index.gif">
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+
+        <footer id="colophon" class="footer site-footer" role="contentinfo">
+
+            <!-- #region Fotter Uper Top -->
+            
+            <!-- #endregion -->            <!-- #region Fotter Top -->
+            <div class="footer-top">
+                <div class="section-padding">
+                    <div class="container" style="width: 100%; max-width: 1200px;">
+                        <div class="row">
+
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                                <div class="widget widget_menu">
+                                    <h3 class="widget-title" style="border-bottom: 1px solid #fff;">Yalla</h3>
+                                    <!-- /.widget-title -->
+                                    <div class="widget-details">
+                                        <nav>
+                                            <ul>
+                                                <li><a href="http://www.yallacheckinn.com/">Home</a></li>
+                                                <li><a href="http://www.yallacheckinn.com/AboutUs.aspx">About us</a></li>
+                                                <li><a href="http://www.yallacheckinn.com/DownloadApps.aspx">Download Mobile App</a></li>
+                                                <li><a href="http://www.yallacheckinn.com/PrivacyPolicy.aspx">Privacy Policy</a></li>
+                                                <li><a href="http://www.yallacheckinn.com/ContactUs.aspx">Contact Us</a></li>
+                                                <li><a href="http://www.yallacheckinn.com/TermsConditions.aspx">Terms & Condition</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <!-- /.widget-details -->
+                                </div>
+                                <!-- /.widget -->
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                                <div class="widget widget_menu">
+                                    <h3 class="widget-title" style="border-bottom: 1px solid #fff;">Services</h3>
+                                    <!-- /.widget-title -->
+                                    <div class="widget-details">
+                                        <nav>
+                                            <ul>
+                                                <li><a href="http://www.yallacheckinn.com">Book a Hotel</a></li>
+                                                <li><a href="http://www.yallacheckinn.com/">Book a Holidays</a></li>
+                                                <li><a href="http://testpayment.yallacheckinn.com/Admin/Login.aspx">Admin Login</a>
+                                                 </li>
+                                            </ul>
+                                        </nav>
+                                        <!-- /.title-list -->
+                                    </div>
+                                    <!-- /.widget-details -->
+                                </div>
+                                <!-- /.widget -->
+                            </div>
+
+                           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="widget widget_subscribe">
+                                    <h3 class="widget-title" style="border-bottom: 1px solid #fff;">Tour Destination</h3>
+                                    <!-- /.widget-title -->
+                                    <div class="widget-details">
+                                        <ul id="FotterDestination" runat="server" class="taglist"></ul>
+                                    </div>
+                                    <!-- /.widget-details -->
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="widget aboutyalla_fotter">
+                                    <h3 class="widget-title" style="border-bottom: 1px solid #fff;">About Yalla Check Inn</h3>
+                                    <p class="aboutyalla_fotter_text">
+                                        Check hotel availability of all city hotels including, many destinations, Rome Hotels & many more hotels & accommodations online.
+                                    </p>
+                                    <p>
+                                        <span class="fa fa-phone Phone"></span><span>+974 44127111</span>
+                                        <span class="fa fa-envelope Envelope"></span><span><a href="mailto:info@yallacheckinn.com">info@yallacheckinn.com</a></span>
+                                    </p>
+                                    <ul class="SocialMediaIcon">
+                                        <li><a href="https://www.facebook.com/yallacheckinn/" target="_blank"><span class="fa fa-facebook SocialMediaIcon Facebook"></span></a></li>
+                                        <li><a href="https://twitter.com/yallacheckinn" target="_blank"><span class="fa fa-twitter SocialMediaIcon Twitter"></span></a></li>
+                                        <li><a href="https://plus.google.com/u/0/111005635858069456882" target="_blank"><span class="fa fa-google-plus SocialMediaIcon GooglePlus"></span></a></li>
+                                        <li><a href="https://www.instagram.com/yallacheckinn/" target="_blank"><span class="fa fa-instagram SocialMediaIcon Instagram"></span></a></li>
+                                        <li><a href="https://www.youtube.com/channel/UCXwBhmvHXzEpLFhiwHhqQnQ" target="_blank"><span class="fa fa-youtube-square SocialMediaIcon Youtube"></span></a></li>
+                                    </ul>
+                                    <ul class="PaymentIcon">
+                                        <li class="paymentopptions mastercard"></li>
+                                        <li class="paymentopptions visacard"></li>
+                                        <li class="paymentopptions amex"></li>
+                                    </ul>
+                                </div>
+                                <!-- /.widget -->
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.section-padding -->
+            </div>
+            <!-- #endregion -->
+            <!-- #region Fotter Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <p class="copyright">&copy; 2017 &nbsp;<a href="http://www.yallacheckinn.com/">YallaCheckinn.com</a> All rights reserved</p>
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- #endregion -->
+
+        </footer>
+
+
+    </form>
+
+</body>
+</html>

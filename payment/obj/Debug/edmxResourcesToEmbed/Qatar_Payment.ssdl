@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuatarPayemntModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="TBLQU_CLIENTMASTER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientfirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientLastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="PhoneNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmailID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBLQU_PAYMENTHIS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vpc_MerchTxnRef" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="vpc_TxnResponseCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="vpc_Amount" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="vpc_Command" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="vpc_Version" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="vpc_OrderInfo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="vpc_Merchant" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="vpc_BatchNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="vpc_Card" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="vpc_ReceiptNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="vpc_AuthorizeId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="vpc_AcqResponseCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="vpc_TransactionNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="vpc_Message" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="created_date" Type="datetime" Nullable="false" />
+    <Property Name="modifed_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBLQU_PAYMENTMASTER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="nvarchar" MaxLength="50" />
+    <Property Name="BookingRef" Type="nvarchar" MaxLength="50" />
+    <Property Name="PackageName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Currency" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Var_Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="payment_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="payment_token" Type="nvarchar" MaxLength="50" />
+    <Property Name="created_date" Type="datetime" />
+    <Property Name="modifed_date" Type="datetime" />
+    <Property Name="booked_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="currencyrate" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaymentDate" Type="varchar" MaxLength="50" />
+    <Property Name="TermAndCondition" Type="bit" />
+    <Property Name="Discription" Type="nvarchar(max)" />
+    <Property Name="FailedAttempt" Type="int" />
+    <Property Name="FailedAttemptLimit" Type="int" />
+    <Property Name="IsBlocked" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBLQU_PAYMENTRate">
+    <Key>
+      <PropertyRef Name="Currency_From" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Currency_From" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Currency_to" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="modifie_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBLQU_User_Master">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="emailid" Type="varchar" MaxLength="50" />
+    <Property Name="mobileno" Type="int" />
+    <Property Name="userid" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+    <Property Name="user_type" Type="int" />
+  </EntityType>
+  <EntityType Name="TBLQU_UserLocation">
+    <Key>
+      <PropertyRef Name="UserLocationPK" />
+    </Key>
+    <Property Name="BookingRef" Type="nvarchar" MaxLength="255" />
+    <Property Name="IP" Type="nvarchar" MaxLength="255" />
+    <Property Name="CountryCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="255" />
+    <Property Name="RegionCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="RegionName" Type="nvarchar" MaxLength="255" />
+    <Property Name="City" Type="nvarchar" MaxLength="255" />
+    <Property Name="ZipCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="TimeZone" Type="nvarchar" MaxLength="255" />
+    <Property Name="Latitude" Type="nvarchar" MaxLength="255" />
+    <Property Name="Longitude" Type="nvarchar" MaxLength="255" />
+    <Property Name="UserLocationPK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <Function Name="GetAdminData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="update_paymentMaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PackageName" Type="varchar" Mode="In" />
+    <Parameter Name="Currency" Type="varchar" Mode="In" />
+    <Parameter Name="Amount" Type="varchar" Mode="In" />
+    <Parameter Name="currencyrate" Type="varchar" Mode="In" />
+    <Parameter Name="BookingRef" Type="varchar" Mode="In" />
+    <Parameter Name="FailedAttemptLimit" Type="int" Mode="In" />
+    <Parameter Name="IsBlocked" Type="bit" Mode="In" />
+  </Function>
+  <EntityContainer Name="QuatarPayemntModelStoreContainer">
+    <EntitySet Name="TBLQU_CLIENTMASTER" EntityType="Self.TBLQU_CLIENTMASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLQU_PAYMENTHIS" EntityType="Self.TBLQU_PAYMENTHIS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLQU_PAYMENTMASTER" EntityType="Self.TBLQU_PAYMENTMASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLQU_PAYMENTRate" EntityType="Self.TBLQU_PAYMENTRate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLQU_User_Master" EntityType="Self.TBLQU_User_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLQU_UserLocation" EntityType="Self.TBLQU_UserLocation" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,16 @@
+H:\SystemData\Qatar_Work\payment\bin\Qa_Payment.dll
+H:\SystemData\Qatar_Work\payment\bin\Qa_Payment.pdb
+H:\SystemData\Qatar_Work\payment\bin\EntityFramework.dll
+H:\SystemData\Qatar_Work\payment\bin\EntityFramework.xml
+H:\SystemData\Qatar_Work\payment\obj\Debug\Qa_Payment.csprojResolveAssemblyReference.cache
+H:\SystemData\Qatar_Work\payment\obj\Debug\Qa_Payment.dll
+H:\SystemData\Qatar_Work\payment\obj\Debug\Qa_Payment.pdb
+H:\SystemData\Qatar_Work\payment\bin\Qa_Payment.dll.config
+C:\Projects\payment\bin\Qa_Payment.dll.config
+C:\Projects\payment\bin\Qa_Payment.dll
+C:\Projects\payment\bin\Qa_Payment.pdb
+C:\Projects\payment\bin\EntityFramework.dll
+C:\Projects\payment\bin\EntityFramework.xml
+C:\Projects\payment\obj\Debug\Qa_Payment.dll
+C:\Projects\payment\obj\Debug\Qa_Payment.pdb
+C:\Projects\payment\obj\Debug\Qa_Payment.csprojResolveAssemblyReference.cache
