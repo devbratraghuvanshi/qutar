@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <table width="500" align="center" style="border:solid 2px black;">
+        <tr style="text-align:center;">
+            <td colspan="4"><h1>Invoice</h1></td>
+        </tr>
+        <tr style="text-align:left;">
+            <td colspan="2" style="text-align:left; padding-left: 20px;"><img src="https://payment.yallacheckinn.com/Image/logoyalla.png" /></td>
+            <td>
+                <div> Date: </div>
+                <div> InvoiceNumber:</div>
+            </td>
+            <td>
+                <div>{{Date}}</div>
+                <div>{{InvoiceNumber}}</div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align:center; border-bottom: solid 2px black;"><strong>Customer Details</strong></td>
+        </tr>
+        <tr>
+            <td>Client Name</td>
+            <td> {{ClientName}}</td>
+            <td>Customer Email</td>
+            <td>{{CustomerEmail}}</td>
+        </tr>
+        <tr>
+            <td>Mobile Number</td>
+            <td>{{MobileNumber}}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Address <br /> <br /></td>
+            <td colspan="3">{{Address}} <br /><br /></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align:center;border-bottom: solid 2px black;"><strong>Booking Details</strong></td>
+        </tr>
+        <tr>
+            <td>Booking Referance</td>
+            <td> {{BookingReferance}}</td>
+            <td>Service Name</td>
+            <td>{{ServiceName}}</td>
+        </tr>
+        <tr>
+            <td>Description<br /><br /></td>
+            <td colspan="3"> {{Description}} <br /><br /></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="border-bottom: solid 2px black;"></td>
+        </tr>
+        <tr>
+            <td>Payment Status</td>
+            <td> {{PaymentStatus}}</td>
+            <td>Total Price</td>
+            <td>{{TotalPrice}} QAR Only</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="border-bottom: solid 2px black;"></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align:center">
+                <br />
+                <br />
+                <br />
+                <br />
+                <div>For Question Concerning this Invoice, please contact</div>
+                <div>Phone :-   +974 66002826     Email :-  info@yallacheckinn.com</div>
+                <div>Www.YallaCheckinn.com </div>
+                <div style="font-size: 12px">(Disputes are subject to jurisdiction of Qatar )</div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

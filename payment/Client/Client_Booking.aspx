@@ -63,6 +63,8 @@
                                             <span style="color: Red; font-weight: bold" id="txt_error"></span>
 
                                             <button class="btn btn-danger btn-block" id="btn_login" type="button">Find Booking</button>
+
+                                            <button class="btn btn-danger btn-block" id="btn_DownloadInvoice" type="button">Download Invoice</button>
                                         </div>
                                     </div>
 

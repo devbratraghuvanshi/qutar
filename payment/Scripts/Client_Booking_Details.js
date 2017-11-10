@@ -103,6 +103,7 @@ $(document).ready(function () {
 
 
         }
+
     });
 
     $("#btn_other_booking").click(function () {
@@ -143,7 +144,15 @@ $(document).ready(function () {
 
     });
 
+    $("#btn_DownloadInvoice").click(function () {
+        if ($("#txt_email").val().trim() != "" && $("#txt_bookingref").val().trim() != "") {
 
+            alert("hi");
+            window.open("http://localhost:49462/Client/invoice.aspx?email=" + encodeURIComponent($("#txt_email").val().trim()) + "&bookingRef=" + encodeURIComponent($("#txt_bookingref").val().trim()), '_blank');
+
+        }
+
+    });
 });
 
 function qs(key) {

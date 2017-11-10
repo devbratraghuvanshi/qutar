@@ -47,6 +47,10 @@
     <Reference Include="EntityFramework">
       <HintPath>packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.12.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.12\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -83,6 +87,8 @@
     <Content Include="Client\Client_Payment_Status.aspx" />
     <Content Include="Client\Client_Service.asmx" />
     <Content Include="Client\Home.aspx" />
+    <Content Include="Client\invoice.aspx" />
+    <Content Include="Client\invoicetemplate.html" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Image\logoyalla 1.png" />
     <Content Include="Image\logoyalla.png" />
@@ -661,6 +667,13 @@
     <Compile Include="Client\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Client\invoice.aspx.cs">
+      <DependentUpon>invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\invoice.aspx.designer.cs">
+      <DependentUpon>invoice.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Client\Location.cs" />
     <Compile Include="Client\vcprequest.cs" />
     <Compile Include="Global.asax.cs">
@@ -684,6 +697,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Client\invoice\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />

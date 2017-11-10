@@ -14,3 +14,5 @@ C:\Projects\payment\bin\EntityFramework.xml
 C:\Projects\payment\obj\Debug\Qa_Payment.dll
 C:\Projects\payment\obj\Debug\Qa_Payment.pdb
 C:\Projects\payment\obj\Debug\Qa_Payment.csprojResolveAssemblyReference.cache
+C:\Projects\payment\bin\itextsharp.dll
+C:\Projects\payment\bin\itextsharp.xml
